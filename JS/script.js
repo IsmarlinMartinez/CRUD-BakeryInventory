@@ -39,3 +39,8 @@ function mostrarProductos() {
         lista.appendChild(li);
     });
 }
+
+function eliminarProducto(id) {
+    inventario = inventario.filter(p => p.id !== id);
+    mostrarProductos();
+}
