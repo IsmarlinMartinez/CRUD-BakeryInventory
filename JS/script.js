@@ -40,6 +40,20 @@ function mostrarProductos() {
     });
 }
 
+function editarProducto(id) {
+    const nuevoNombre = prompt("Nuevo nombre:");
+    const nuevaCantidad = prompt("Nueva cantidad:");
+    const nuevoPrecio = prompt("Nuevo precio:");
+
+    inventario = inventario.map(p =>
+        p.id === id
+            ? { ...p, nombre: nuevoNombre, cantidad: nuevaCantidad, precio: nuevoPrecio }
+            : p
+    );
+
+    mostrarProductos();
+}
+
 function eliminarProducto(id) {
     inventario = inventario.filter(p => p.id !== id);
     mostrarProductos();
