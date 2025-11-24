@@ -1,0 +1,1 @@
+console.los("Inicialización del proyecto")
