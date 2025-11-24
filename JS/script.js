@@ -53,3 +53,8 @@ function editarProducto(id) {
 
     mostrarProductos();
 }
+
+function eliminarProducto(id) {
+    inventario = inventario.filter(p => p.id !== id);
+    mostrarProductos();
+}
