@@ -2,28 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inventario Panadería</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Inventario de Panadería</title>
 </head>
 <body>
+    <div class="container">
+        <h1>Gestión de Inventario de Panadería</h1>
+        
+        <div class="form-section">
+            <h2>Agregar Producto</h2>
+            <div class="form-container">
+                <input type="text" id="nombre" placeholder="Nombre del producto">
+                <input type="number" id="cantidad" placeholder="Cantidad" min="0">
+                <input type="number" id="precio" placeholder="Precio" min="0" step="0.01">
+                <button onclick="agregarProducto()" class="btn-agregar">Agregar Producto</button>
+            </div>
+        </div>
 
-    <h1>Inventario de Panadería</h1>
-
-    <div class="form-container">
-        <h2>Agregar Producto</h2>
-
-        <input type="text" id="nombre" placeholder="Nombre del producto">
-        <input type="number" id="cantidad" placeholder="Cantidad">
-        <input type="number" id="precio" placeholder="Precio">
-
-        <button onclick="agregarProducto()">Agregar</button>
+        <div class="inventory-section">
+            <h2>Inventario Actual</h2>
+            <div id="productList" class="product-list">
+                <!-- Los productos aparecerán aquí -->
+            </div>
+        </div>
     </div>
 
-    <hr>
-
-    <h2>Lista de Productos</h2>
-    <ul id="lista"></ul>
-
-    <script src="js/app.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>
